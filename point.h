@@ -15,9 +15,7 @@ namespace geometry
 			double y() const;
 			std::string toString() const;
 			void move(double _dx, double _dy);
-			double distance(Point _p1, Point _p2) const;
-			void reset();
-			Point symmetric(Point _point) const;
+			double distance(Point _p) const;
 		private:
 			double _x;
 			double _y;

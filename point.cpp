@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include "point.h"
 
 
@@ -29,5 +30,13 @@ namespace geometry
 	{
 		_x += _dx;
 		_y += _dy;
+	}
+
+	double Point::distance(Point _p) const
+	{
+		double distX = _p.x() - _x;
+		double distY = _p.y() - _y;
+
+		return sqrt(distX * distX + distY * distY);
 	}
 }
