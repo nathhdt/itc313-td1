@@ -25,7 +25,10 @@ int main()
 	std::cout << "Point p1(" << p1.x() << ", " << p1.y() << ")" << std::endl;
 
 	Point p3 = p2.symmetric();
-	std::cout << "Point p3(" << p3.x() << ", " << p3.y() << ")" << std::endl;
+	std::cout << "Point p3(" << p3.x() << ", " << p3.y() << ") (symétrique à p2)" << std::endl;
+
+	Point p4 = p1.symmetricPoint(p2);
+	std::cout << "Point p4(" << p4.x() << ", " << p4.y() << ") (symétrique de p1 par rapport a p2)" << std::endl;
 
 	return 0;
 }

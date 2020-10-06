@@ -49,6 +49,17 @@ namespace geometry
 	Point& Point::symmetric() const
 	{
 		Point symPoint(-_x, -_y);
+
+		return symPoint;
+	}
+
+	Point& Point::symmetricPoint(Point _pSym) const
+	{
+		double distPtoSymPX = _x - _pSym.x();
+		double distPtoSymPY = _y - _pSym.y();
+
+		Point symPoint(_pSym.x() - distPtoSymPX, _pSym.y() - distPtoSymPY);
+
 		return symPoint;
 	}
 }

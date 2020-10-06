@@ -18,6 +18,7 @@ namespace geometry
 			double distance(Point _p) const;
 			void reset();
 			Point& symmetric() const;
+			Point& symmetricPoint(Point _pSym) const;
 		private:
 			double _x;
 			double _y;
