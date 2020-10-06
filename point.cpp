@@ -39,4 +39,10 @@ namespace geometry
 
 		return sqrt(distX * distX + distY * distY);
 	}
+
+	void Point::reset()
+	{
+		_x = 0;
+		_y = 0;
+	}
 }

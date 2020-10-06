@@ -17,5 +17,11 @@ int main(int argc, char const *argv[])
 
 	std::cout << "Distance entre p1 et p2: " << p1.distance(p2) << std::endl;
 
+
+	
+	std::cout << "Mise à l'origine du point p1" << std::endl;
+	p1.reset();
+	std::cout << "Point p1(" << p1.x() << ", " << p1.y() << ")" << std::endl;
+
 	return 0;
 }

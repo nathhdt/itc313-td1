@@ -16,6 +16,7 @@ namespace geometry
 			std::string toString() const;
 			void move(double _dx, double _dy);
 			double distance(Point _p) const;
+			void reset();
 		private:
 			double _x;
 			double _y;
