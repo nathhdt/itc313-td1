@@ -18,4 +18,9 @@ namespace geometry
 	{
 		return _y;
 	}
+
+	std::string Point::toString() const
+	{
+		std::cout << "P(" << _x << ";" << _y << ")" << std::endl;
+	}
 }
