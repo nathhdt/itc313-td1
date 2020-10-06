@@ -1,4 +1,5 @@
 #include <string>
+#include "point.h"
 
 
 #ifndef SEGMENT_H
@@ -12,8 +13,8 @@ namespace geometry
 		public:
 			Segment(double x_a, double y_a, double x_b, double y_b);
 			Segment(Point _a, Point _b);
-			void moveA(double _ax, double _ay);
-			void moveB(double _bx, double _by);
+			void moveA(double x_a, double y_a);
+			void moveB(double x_b, double y_b);
 			Point& pointA() const;
 			Point& pointB() const;
 			std::string display() const;

@@ -23,7 +23,8 @@ namespace geometry
 
 	std::string Point::toString() const
 	{
-		std::cout << "P(" << _x << ";" << _y << ")" << std::endl;
+		std::string toStr = "(" + std::to_string(_x).substr(0, std::to_string(_x).find(".") + 2) + ";" + std::to_string(_y).substr(0, std::to_string(_y).find(".") + 2) + ")";
+		return toStr;
 	}
 
 	void Point::move(double _dx, double _dy)
