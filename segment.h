@@ -10,8 +10,8 @@ namespace geometry
 	class Segment
 	{
 		public:
-			Point(double x_a, double y_a, double x_b, double y_b);
-			Point(Point _a, Point _b);
+			Segment(double x_a, double y_a, double x_b, double y_b);
+			Segment(Point _a, Point _b);
 			void moveA(double _ax, double _ay);
 			void moveB(double _bx, double _by);
 			Point& pointA() const;

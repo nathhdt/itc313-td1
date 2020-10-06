@@ -1,5 +1,6 @@
 #include <iostream>
 #include "point.h"
+#include "segment.h"
 
 
 using namespace geometry;
