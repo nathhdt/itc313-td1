@@ -24,4 +24,10 @@ namespace geometry
 	{
 		std::cout << "P(" << _x << ";" << _y << ")" << std::endl;
 	}
+
+	void Point::move(double _dx, double _dy)
+	{
+		_x += _dx;
+		_y += _dy;
+	}
 }
