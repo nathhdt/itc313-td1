@@ -45,4 +45,10 @@ namespace geometry
 		_x = 0;
 		_y = 0;
 	}
+
+	Point& Point::symmetric() const
+	{
+		Point symPoint(-_x, -_y);
+		return symPoint;
+	}
 }

@@ -17,6 +17,7 @@ namespace geometry
 			void move(double _dx, double _dy);
 			double distance(Point _p) const;
 			void reset();
+			Point& symmetric() const;
 		private:
 			double _x;
 			double _y;
