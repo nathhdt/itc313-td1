@@ -14,11 +14,9 @@ namespace geometry
 			double x() const;
 			double y() const;
 			std::string toString() const;
-
 			void setX(double x);
 			void setY(double y);
 			void setXY(double x, double y);
-
 			void move(double dx, double dy);
 			double distance(Point p) const;
 			void reset();
