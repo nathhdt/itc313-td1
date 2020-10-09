@@ -24,6 +24,7 @@ namespace geometry
 	std::string Point::toString() const
 	{
 		std::string toStr = "(" + std::to_string(_x).substr(0, std::to_string(_x).find(".") + 2) + ";" + std::to_string(_y).substr(0, std::to_string(_y).find(".") + 2) + ")";
+		
 		return toStr;
 	}
 
@@ -71,10 +72,7 @@ namespace geometry
 
 	Point& Point::symmetricPoint(Point pSym) const
 	{
-		double distPtoSymPX = _x - pSym.x();
-		double distPtoSymPY = _y - pSym.y();
-
-		Point symPoint(pSym.x() - distPtoSymPX, pSym.y() - distPtoSymPY);
+		Point symPoint(pSym.x() - _x - pSym.x(), pSym.y() - _y - pSym.y());
 
 		return symPoint;
 	}
