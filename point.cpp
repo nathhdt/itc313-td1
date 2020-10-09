@@ -70,9 +70,12 @@ namespace geometry
 		return symPoint;
 	}
 
-	Point& Point::symmetricPoint(Point pSym) const
+	Point& Point::symmetricPoint(Point center) const
 	{
-		Point symPoint(pSym.x() - _x - pSym.x(), pSym.y() - _y - pSym.y());
+		double symX = 2 * center.x() - _x;
+		double symY = 2 * center.y() - _y;
+
+		Point symPoint(symX, symY);
 
 		return symPoint;
 	}

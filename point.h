@@ -21,7 +21,7 @@ namespace geometry
 			double distance(Point p) const;
 			void reset();
 			Point& symmetric() const;
-			Point& symmetricPoint(Point pSym) const;
+			Point& symmetricPoint(Point center) const;
 		private:
 			double _x;
 			double _y;
