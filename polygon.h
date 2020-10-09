@@ -1,4 +1,5 @@
 #include <string>
+#include "point.h"
 
 
 #ifndef POLYGON_H
@@ -10,9 +11,10 @@ namespace geometry
 	class Polygon
 	{
 		public:
-			
+			Polygon(int vertex);
 		private:
-			int _poly_vertex;
+			int _vertex;
+			Point _vertex_points[];
 	};
 }
 

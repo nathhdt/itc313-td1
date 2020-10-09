@@ -10,7 +10,7 @@ namespace geometry
 	class Point
 	{
 		public:
-			Point(double x, double y);
+			Point(double x=0, double y=0);
 			double x() const;
 			double y() const;
 			std::string toString() const;
@@ -26,6 +26,8 @@ namespace geometry
 			double _x;
 			double _y;
 	};
+
+	double distance2(Point a, Point b);
 }
 
 

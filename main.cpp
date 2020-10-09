@@ -25,6 +25,8 @@ int main()
 
 	std::cout << "Distance du point p1 à p2: " << p2.distance(p1) << std::endl;
 
+	std::cout << "Distance du point p1 à p2 (2nde fonction): " << distance2(p1, p2) << std::endl;
+
 	std::cout << "On crée un point p2Sym symétrie de p2 par rapport à l'origine" << std::endl;
 	Point p2Sym = p2.symmetric();
 	std::cout << "p2Sym" << p2Sym.toString() << std::endl;

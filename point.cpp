@@ -76,4 +76,10 @@ namespace geometry
 
 		return symPoint;
 	}
+
+	// Fonction hors-classe
+	double distance2(Point a, Point b)
+	{
+		return a.distance(b);
+	}
 }

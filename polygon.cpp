@@ -5,8 +5,8 @@
 
 namespace geometry
 {
-	Polygon::Polygon()
-	: 
+	Polygon::Polygon(int vertex)
+	: _vertex(vertex)
 	{
 
 	}
