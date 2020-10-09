@@ -14,11 +14,16 @@ namespace geometry
 			double x() const;
 			double y() const;
 			std::string toString() const;
-			void move(double _dx, double _dy);
-			double distance(Point _p) const;
+
+			void setX(double x);
+			void setY(double y);
+			void setXY(double x, double y);
+
+			void move(double dx, double dy);
+			double distance(Point p) const;
 			void reset();
 			Point& symmetric() const;
-			Point& symmetricPoint(Point _pSym) const;
+			Point& symmetricPoint(Point pSym) const;
 		private:
 			double _x;
 			double _y;

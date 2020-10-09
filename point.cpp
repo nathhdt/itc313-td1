@@ -27,24 +27,39 @@ namespace geometry
 		return toStr;
 	}
 
-	void Point::move(double _dx, double _dy)
+	void Point::setX(double x)
 	{
-		_x += _dx;
-		_y += _dy;
+		_x = x;
 	}
 
-	double Point::distance(Point _p) const
+	void Point::setY(double y)
 	{
-		double distX = _p.x() - _x;
-		double distY = _p.y() - _y;
+		_y = y;
+	}
+
+	void Point::setXY(double x, double y)
+	{
+		setX(x);
+		setY(y);
+	}
+
+	void Point::move(double dx, double dy)
+	{
+		setXY(_x + dx, _y + dy);
+	}
+
+	double Point::distance(Point p) const
+	{
+		double distX = p.x() - _x;
+		double distY = p.y() - _y;
 
 		return sqrt(distX * distX + distY * distY);
 	}
 
 	void Point::reset()
 	{
-		_x = 0;
-		_y = 0;
+		setX(0);
+		setY(0);
 	}
 
 	Point& Point::symmetric() const
@@ -54,12 +69,12 @@ namespace geometry
 		return symPoint;
 	}
 
-	Point& Point::symmetricPoint(Point _pSym) const
+	Point& Point::symmetricPoint(Point pSym) const
 	{
-		double distPtoSymPX = _x - _pSym.x();
-		double distPtoSymPY = _y - _pSym.y();
+		double distPtoSymPX = _x - pSym.x();
+		double distPtoSymPY = _y - pSym.y();
 
-		Point symPoint(_pSym.x() - distPtoSymPX, _pSym.y() - distPtoSymPY);
+		Point symPoint(pSym.x() - distPtoSymPX, pSym.y() - distPtoSymPY);
 
 		return symPoint;
 	}
