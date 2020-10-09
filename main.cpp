@@ -32,7 +32,7 @@ int main()
 	std::cout << "p2Sym" << p2Sym.toString() << std::endl;
 
 	std::cout << "On crée un point p2SymBis symétrie de p2 par rapport à p2Sym" << std::endl;
-	Point p2SymBis = p2.symmetricPoint(p2Sym);
+	Point p2SymBis = p2.symmetric(p2Sym);
 	std::cout << "p2SymBis" << p2SymBis.toString() << std::endl;
 
 	std::cout << "On crée un segment composé de p1 et de p2" << std::endl;

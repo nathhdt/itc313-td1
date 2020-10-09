@@ -63,14 +63,7 @@ namespace geometry
 		setY(0);
 	}
 
-	Point& Point::symmetric() const
-	{
-		Point symPoint(-_x, -_y);
-
-		return symPoint;
-	}
-
-	Point& Point::symmetricPoint(Point center) const
+	Point& Point::symmetric(Point center) const
 	{
 		double symX = 2 * center.x() - _x;
 		double symY = 2 * center.y() - _y;

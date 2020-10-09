@@ -20,8 +20,7 @@ namespace geometry
 			void move(double dx, double dy);
 			double distance(Point p) const;
 			void reset();
-			Point& symmetric() const;
-			Point& symmetricPoint(Point center) const;
+			Point& symmetric(Point center=Point(0.0, 0.0)) const;
 		private:
 			double _x;
 			double _y;
