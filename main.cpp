@@ -1,6 +1,7 @@
 #include <iostream>
 #include "point.h"
 #include "segment.h"
+#include "polygon.h"
 
 
 using namespace geometry;
@@ -52,6 +53,10 @@ int main()
 	std::cout << "On récupère le point midSeg du milieu du segment" << std::endl;
 	Point midSeg = segP1P2.middle();
 	std::cout << "midSeg" << midSeg.toString() << std::endl;
+
+	std::cout << "On initialise un polygône" << std::endl;
+	Polygon poly1(p1, p2, p2Sym);
+	poly1.show();
 
 	return 0;
 }

@@ -1,5 +1,6 @@
 #include <string>
 #include "point.h"
+#include <vector>
 
 
 #ifndef POLYGON_H
@@ -11,10 +12,11 @@ namespace geometry
 	class Polygon
 	{
 		public:
-			Polygon(int vertex);
+			Polygon(Point _point1, Point _point2, Point _point3);
+			void addPoint(Point _newPoint);
+			void show();
 		private:
-			int _vertex;
-			Point _vertex_points[];
+			std::vector<Point> _vertexes;
 	};
 }
 
