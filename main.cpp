@@ -54,9 +54,29 @@ int main()
 	Point midSeg = segP1P2.middle();
 	std::cout << "midSeg" << midSeg.toString() << std::endl;
 
-	std::cout << "On initialise un polygône" << std::endl;
+	std::cout << "On initialise un polygône poly1(p1, p2, p2Sym)" << std::endl;
 	Polygon poly1(p1, p2, p2Sym);
 	poly1.show();
+
+	std::cout << "On ajoute le point p2SymBis dans le polygône poly1" << std::endl;
+	poly1.addPoint(p2SymBis);
+	poly1.show();
+
+	std::cout << "On modifie la coordonnée X et Y du point 2" << std::endl;
+	poly1.setPointXY(2, 44, 44);
+	poly1.show();
+
+	std::cout << "Valeur X du point 1 du polygône: " << poly1.getPointX(1) << std::endl;
+
+	std::cout << "Valeur Y du point 3 du polygône: " << poly1.getPointY(3) << std::endl;
+
+	std::cout << "On récupère le point 0 du polygône dans un nouveau point qu'on appelle polPoint1" << std::endl;
+	Point polPoint1 = poly1.getPoint(0);
+	std::cout << "polPoint1" << polPoint1.toString() << std::endl;
+
+	std::cout << "Nombre de sommets du polygône poly1: " << poly1.vertexesNumber() << std::endl;
+
+	std::cout << "Périmètre du polygône poly1: " << poly1.perimeter() << std::endl;
 
 	return 0;
 }

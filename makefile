@@ -2,7 +2,7 @@
 
 # Choose your compiler g++/clang++
 CXX        = g++
-CXXFLAGS   = -Wall -Wextra -std=c++11
+CXXFLAGS   = -std=c++11 # -Wall -Wextra
 DEPFLAGS   = -MMD
 LDFLAGS    = 
 SRCS       = main.cpp point.cpp segment.cpp polygon.cpp
