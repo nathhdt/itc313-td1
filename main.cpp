@@ -2,6 +2,7 @@
 #include "point.h"
 #include "segment.h"
 #include "polygon.h"
+#include "triangle.h"
 
 
 using namespace geometry;
@@ -77,6 +78,38 @@ int main()
 	std::cout << "Nombre de sommets du polygône poly1: " << poly1.vertexesNumber() << std::endl;
 
 	std::cout << "Périmètre du polygône poly1: " << poly1.perimeter() << std::endl;
+
+	std::cout << "On crée un triangle tri1(p1, p2, p2Sym)" << std::endl;
+	Triangle tri1(p1, p2, p2Sym);
+	tri1.show();
+	
+	std::cout << "On modifie la coordonnée X et Y du point 0" << std::endl;
+	tri1.setPointXY(0, 2, -2);
+	tri1.show();
+
+	std::cout << "Aire du triangle: " << tri1.getArea() << std::endl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	return 0;
 }
